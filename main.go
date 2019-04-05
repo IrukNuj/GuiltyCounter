@@ -19,16 +19,16 @@ func main() {
 	ap_email := page.FindByID("ap_email")
 	ap_password := page.FindByID("ap_password")
 
-	var email, password string
+	var email string
 
 	fmt.Print("emailを入力してください: ")
-	email, _ := fmt.Scanf()
+	fmt.Scanf(email)
 
 	fmt.Print("passwordを入力してください: ")
 	password, _ := terminal.ReadPassword(int(syscall.Stdin))
 
-	ap_email.Fill(strconv.Atoi.(email))
-	ap_password.Fill(password)
+	ap_email.Fill(email)
+	ap_password.Fill(string(password))
 
 
 
